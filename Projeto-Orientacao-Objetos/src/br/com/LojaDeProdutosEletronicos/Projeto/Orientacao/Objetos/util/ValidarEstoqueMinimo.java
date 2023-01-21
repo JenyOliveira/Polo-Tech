@@ -1,4 +1,4 @@
-package br.com.LojaDeCelulares.Projeto.Orientacao.Objetos.util;
+package br.com.LojaDeProdutosEletronicos.Projeto.Orientacao.Objetos.util;
 
 public class ValidarEstoqueMinimo {
 

@@ -1,14 +1,14 @@
-package br.com.LojaDeCelulares.Projeto.Orientacao.Objetos.testes;
+package br.com.LojaDeProdutosEletronicos.Projeto.Orientacao.Objetos.testes;
 
-import br.com.LojaDeCelulares.Projeto.Orientacao.Objetos.enumerador.EnumMarca;
-import br.com.LojaDeCelulares.Projeto.Orientacao.Objetos.modelo.Celulares;
-import br.com.LojaDeCelulares.Projeto.Orientacao.Objetos.util.ValidarEstoqueMinimo;
+import br.com.LojaDeProdutosEletronicos.Projeto.Orientacao.Objetos.enumerador.EnumMarcaCelulares;
+import br.com.LojaDeProdutosEletronicos.Projeto.Orientacao.Objetos.modelo.Celulares;
+import br.com.LojaDeProdutosEletronicos.Projeto.Orientacao.Objetos.util.ValidarEstoqueMinimo;
 
 public class TesteCelulares {
 
     public static void main(String[] args) {
 
-        Celulares celular1 = new Celulares(EnumMarca.SAMSUNG);
+        Celulares celular1 = new Celulares(EnumMarcaCelulares.SAMSUNG);
 
         celular1.setIdDoProduto(01);
         celular1.setSistemaOperacional("Android");
@@ -34,8 +34,7 @@ public class TesteCelulares {
         System.out.println(celular1);
         ValidarEstoqueMinimo.estoqueMinimo(celular1.getEstoqueAtual());
 
-
-        Celulares celular2 = new Celulares(EnumMarca.SAMSUNG);
+        Celulares celular2 = new Celulares(EnumMarcaCelulares.SAMSUNG);
 
         celular2.setIdDoProduto(02);
         celular2.setSistemaOperacional("Android");
@@ -52,7 +51,7 @@ public class TesteCelulares {
         celular2.setEstoqueAtual(20);
 
 
-        Celulares celular3 = new Celulares(EnumMarca.MOTOROLA);
+        Celulares celular3 = new Celulares(EnumMarcaCelulares.MOTOROLA);
 
         celular3.setIdDoProduto(03);
         celular3.setSistemaOperacional("Android");
@@ -68,7 +67,7 @@ public class TesteCelulares {
         celular3.setPreco(999.10);
         celular3.setEstoqueAtual(30);
 
-        Celulares celular4 = new Celulares(EnumMarca.MOTOROLA);
+        Celulares celular4 = new Celulares(EnumMarcaCelulares.MOTOROLA);
 
         celular4.setIdDoProduto(04);
         celular4.setSistemaOperacional("Android");
@@ -85,7 +84,7 @@ public class TesteCelulares {
         celular4.setEstoqueAtual(40);
 
 
-        Celulares celular5 = new Celulares(EnumMarca.APPLE);
+        Celulares celular5 = new Celulares(EnumMarcaCelulares.APPLE);
 
         celular5.setIdDoProduto(05);
         celular5.setSistemaOperacional("Iphone IOS");

@@ -1,6 +1,6 @@
-package br.com.LojaDeCelulares.Projeto.Orientacao.Objetos.modelo;
+package br.com.LojaDeProdutosEletronicos.Projeto.Orientacao.Objetos.modelo;
 
-import br.com.LojaDeCelulares.Projeto.Orientacao.Objetos.enumerador.EnumMarca;
+import br.com.LojaDeProdutosEletronicos.Projeto.Orientacao.Objetos.enumerador.EnumMarcaCelulares;
 
 public class Celulares extends ProdutoEletronicos {
 
@@ -9,6 +9,7 @@ public class Celulares extends ProdutoEletronicos {
 
     private String sistemaOperacional;
     private double tamanhoDeDisplay;
+    private EnumMarcaCelulares marca;
     private String cameraTraseira;
     private String cameraFrontal;
     private String processador;
@@ -22,7 +23,7 @@ public class Celulares extends ProdutoEletronicos {
         atualizarQuantidadeDeProdutos();
     }
 
-    public Celulares(EnumMarca marca) {  // Consttrutor
+    public Celulares(EnumMarcaCelulares marca) {  // Consttrutor
         atualizarQuantidadeDeProdutos();
         this.marca = marca;
     }
@@ -47,6 +48,13 @@ public class Celulares extends ProdutoEletronicos {
 
     public void setTamanhoDeDisplay(double tamanhoDeDisplay) {
         this.tamanhoDeDisplay = tamanhoDeDisplay;
+    }
+
+    public EnumMarcaCelulares getMarca() {
+        return marca;
+    }
+    public void setMarca(EnumMarcaCelulares marca) {
+        this.marca = marca;
     }
 
     public String getCameraTraseira() {

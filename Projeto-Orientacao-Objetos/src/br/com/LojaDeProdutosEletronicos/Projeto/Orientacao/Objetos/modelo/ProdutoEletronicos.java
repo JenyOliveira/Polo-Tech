@@ -1,11 +1,8 @@
-package br.com.LojaDeCelulares.Projeto.Orientacao.Objetos.modelo;
-
-import br.com.LojaDeCelulares.Projeto.Orientacao.Objetos.enumerador.EnumMarca;
+package br.com.LojaDeProdutosEletronicos.Projeto.Orientacao.Objetos.modelo;
 
 public abstract class ProdutoEletronicos { //Herança
 
     protected int idDoProduto;
-    protected EnumMarca marca;
     protected String cor;
     protected int garantiaEmMeses; //usar esse método com abstrato, dando opção de garantia em meses e dias em diferentes produtos
     protected int estoqueAtual;
@@ -13,6 +10,7 @@ public abstract class ProdutoEletronicos { //Herança
     protected double preco;
     protected double caixaInicial = 1000.00;
     protected static int quantidadeDeProdutos;
+
 
     // Métodos
 
@@ -40,14 +38,6 @@ public abstract class ProdutoEletronicos { //Herança
 
     public void setIdDoProduto(int idDoProduto) {
         this.idDoProduto = idDoProduto;
-    }
-
-    public EnumMarca getMarca() {
-        return marca;
-    }
-
-    public void setMarca(EnumMarca marca) {
-        this.marca = marca;
     }
 
     public String getCor() {
@@ -101,4 +91,6 @@ public abstract class ProdutoEletronicos { //Herança
     public static int getQuantidadeDeProdutos() {
         return quantidadeDeProdutos;
     }
+
+
 }
