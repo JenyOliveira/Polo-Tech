@@ -1,15 +1,22 @@
+import model.Produto;
+
 public class PreçoDoProduto {
 
-    private double precoDoProduto;
+    private int quantidade;
 
 
-    public double getPrecoDoProduto() {
-        return precoDoProduto;
+
+
+    public  double calcularPreco (Produto produto) {
+        return produto.getPreco() * quantidade;
     }
 
-    public void setPrecoDoProduto(double precoDoProduto) {
-        this.precoDoProduto = precoDoProduto;
+    public double calcularDesconto (){
+        if calcularPreco() < 100 {
+            preco = calcularPreco() - 0.10;
+        }
     }
+
 
 
 
