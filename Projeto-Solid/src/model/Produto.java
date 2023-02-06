@@ -3,21 +3,31 @@ package model;
 public class Produto  {
     
     private String nomeDoProduto;
+    private Double preco;
+    private Double peso;
+    private  Double quantidade;
 
-    public Produto(String celular) {
+    public String getNomeDoProduto() {
+        return nomeDoProduto;
     }
 
-    public static void main(String[] args) {
-
-        Produto produto1 = new Produto("Celular");
-
-        Produto produto2 = new Produto("Fone");
-        
-
-
+    public Double getPeso() {
+        return peso;
     }
 
-
-    public double getPreco() {
+    public Double getPreco() {
+        return preco;
     }
+
+    public Double getQuantidade() {
+        return quantidade;
+    }
+
+    public Produto(Double preco, Double peso, String nomeDoProduto, Double quantidade){
+        this.preco = preco;
+        this.peso = peso;
+        this.nomeDoProduto = nomeDoProduto;
+        this.quantidade = quantidade;
+    }
+
 }
