@@ -4,19 +4,19 @@ import model.Produto;
 
 public class PrecoDoProduto {
 
-        private FreteDoProduto freteDoProduto;
+        private final FreteDoProduto freteDoProduto;
         private ValordeDesconto valordeDesconto;
 
 
-        public PrecoDoProduto () {
+        public PrecoDoProduto (FreteDoProduto freteDoProduto, ValordeDesconto valordeDesconto) {
             this.freteDoProduto = freteDoProduto;
             this.valordeDesconto = valordeDesconto;
         }
 
-        public Double calcular (Produto produto, Double quilometro) {
+        public Double calcular (Produto produto, Double quilometro) throws NãoEntregaExpection {
             Double frete = freteDoProduto.calcular(produto, quilometro);
             Double desconto = valordeDesconto.calcular(produto);
-            return (produto.getPreco()  * produto.getQuantidade()) + frete - desconto;
+            return (produto.getPreco() * produto.getQuantidade()) + frete - desconto;
         }
 
 }
