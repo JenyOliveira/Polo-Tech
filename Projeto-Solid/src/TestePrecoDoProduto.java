@@ -21,7 +21,7 @@ public class TestePrecoDoProduto {
 
 
         try {
-            System.out.println("Preco do Celular:");
+            System.out.println("Preco do " + produto.getNomeDoProduto() + ":");
             System.out.println(precoDoProduto1.calcular(produto, quilometro));
         } catch (NãoEntregaExpection e) {
             System.out.println(e.getMessage());
