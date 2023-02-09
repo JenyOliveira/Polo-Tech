@@ -2,10 +2,15 @@ package service;
 
 import model.Funcionario;
 
-public class CalculadoraDeBonusPF<T extends Funcionario & CalculadoraDeBonus> {
+public class CalculadoraDeBonusPF extends Funcionario implements CalculadoraDeBonus {
 
-    public Double calcularBonus(T funcionario) {
-        Double valorDaBonificacao = funcionario.getVendas() * 0.1;
-        return valorDaBonificacao;
+
+    @Override
+    public Double calcularBonus(Double venda) {
+        if (getVendas() > 10_001.00) {
+            throw new RuntimeException("O valor máximo de bonficação é 1.000");
+
+        }
+        return getVendas() * 0.1;
     }
 }

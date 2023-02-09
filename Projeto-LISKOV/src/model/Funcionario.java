@@ -25,8 +25,9 @@ public class Funcionario {
     public Double getVendas() {
         return vendas;
     }
-
     public void setVendas(Double vendas) {
         this.vendas = vendas;
     }
+
+
 }

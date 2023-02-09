@@ -21,7 +21,6 @@ public class TesteCalculadoraDeSalario {
         funcionarioCLT.setValorHora(50.00);
 
 
-
         System.out.println(calcularSalario(new CalculadoraDeSalarioPJ(), funcionarioPJ));
         System.out.println(calcularSalario(new CalculadoraDeSalarioPF(), funcionarioCLT));
 
