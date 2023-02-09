@@ -6,11 +6,11 @@ public class CalculadoraDeBonusPF extends Funcionario implements CalculadoraDeBo
 
 
     @Override
-    public Double calcularBonus(Double venda) {
-        if (getVendas() > 10_001.00) {
+    public Double calcularBonus() {
+        if (vendas > 10_001.00) {
             throw new RuntimeException("O valor máximo de bonficação é 1.000");
-
         }
-        return getVendas() * 0.1;
+        return vendas * 0.1;
+
     }
 }

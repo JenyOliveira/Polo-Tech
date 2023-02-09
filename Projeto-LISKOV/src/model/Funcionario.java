@@ -4,7 +4,7 @@ public class Funcionario {
 
     private Double valorHora;
     private Integer horasNormais;
-    private Double vendas;
+    protected Double vendas;
 
     public Double getValorHora() {
         return valorHora;
@@ -28,6 +28,7 @@ public class Funcionario {
     public void setVendas(Double vendas) {
         this.vendas = vendas;
     }
+
 
 
 }

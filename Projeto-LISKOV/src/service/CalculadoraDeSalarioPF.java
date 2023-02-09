@@ -8,7 +8,7 @@ public class CalculadoraDeSalarioPF implements CalculadoraDeSalario<FuncionarioC
     private final CalculadoraDeHoraExtraService<FuncionarioCLT> calculadoraDeHoraExtraService = new CalculadoraDeHoraExtraService();
 
     private final CalculadoraDeBonusPF calculadoraDeBonusPF = new CalculadoraDeBonusPF();
-    public Double calcularSalarioDoDia(FuncionarioCLT funcionarioCLT) throws SalarioException {
+    public Double calcularSalarioDoDia(FuncionarioCLT funcionarioCLT) throws SalarioException, BonusException {
 
         Double valorHoraExtra = 0.0;
         Double valorHorasNormais = 0.0;
@@ -30,7 +30,7 @@ public class CalculadoraDeSalarioPF implements CalculadoraDeSalario<FuncionarioC
             throw new RuntimeException("O desconto não pode ser maior que o salário bruto");
 
         }
-        return salarioBruto - calculadoraDeImposto.calcularImpostoTotal(salarioBruto) + calculadoraDeBonusPF.calcularBonus(500.00);
+        return salarioBruto - calculadoraDeImposto.calcularImpostoTotal(salarioBruto) + calculadoraDeBonusPF.getVendas();
     }
 
 }
