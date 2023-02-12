@@ -1,9 +1,7 @@
 package service;
 
-import model.Funcionario;
+import model.Salario;
 
-public interface CalculadoraDeSalario<T extends Funcionario> {
-
-    Double calcularSalarioDoDia(T funcionario) throws SalarioException, BonusException;
-
+public interface CalculadoraDeSalario {
+    Double calcular(Double salarioBruto, Double descontos, Double bonus);
 }
