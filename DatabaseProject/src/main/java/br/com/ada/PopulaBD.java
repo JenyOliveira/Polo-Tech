@@ -20,6 +20,14 @@ public class PopulaBD {
         }
     }
 
+    /* public static void main(String[] args) {
+        try {
+            criarAluno(5);
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    } */
+
     public static void criarAluno(Integer qtdAlunos) throws SQLException {
         for (int i = 0; i < qtdAlunos; i++){
             Faker faker = new Faker();
