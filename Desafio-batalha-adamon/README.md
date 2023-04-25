@@ -1,4 +1,4 @@
-## Defasio de Projeto: Adamons
+## Desafio de Projeto: Adamons
 ## Descrição
 Este projeto permite que seja feito o cadastro, gerenciamento e batalha de Adamons.
 
