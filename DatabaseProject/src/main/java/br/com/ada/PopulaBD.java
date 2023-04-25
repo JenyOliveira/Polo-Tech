@@ -14,19 +14,11 @@ public class PopulaBD {
 
     public static void main(String[] args){
         try {
-            atribuirEndereco();
+            atribuirEndereço();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
     }
-
-    /* public static void main(String[] args) {
-        try {
-            criarAluno(5);
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }
-    } */
 
     public static void criarAluno(Integer qtdAlunos) throws SQLException {
         for (int i = 0; i < qtdAlunos; i++){
@@ -60,18 +52,18 @@ public class PopulaBD {
         }
     }
 
-    public static void atribuirEndereco() throws SQLException {
+    public static void atribuirEndereço() throws SQLException {
         Connection con = DriverManager.getConnection(
                 DATA_BASE_URL,
                 DATA_BASE_USER,
                 DATA_BASE_PASSWORD
         );
-        PreparedStatement ps = con.prepareStatement("select a.id from aluno a full join endereco e on e.id_aluno = a.id where e.id is null");
+        PreparedStatement ps = con.prepareStatement("select a.id from aluno a full join endereço e on e.id_aluno = a.id where e.id is null");
         ResultSet rs = ps.executeQuery();
         Faker faker = new Faker();
 
         while (rs.next()){
-            ps = con.prepareStatement("INSERT INTO public.endereco (id_aluno, logradouro, nome, numero, complemento, cep) VALUES(?, ?, ?, ?, ?, ?)");
+            ps = con.prepareStatement("INSERT INTO public.endereço (id_aluno, logadouro, nome, numero, complemento, cep) VALUES(?, ?, ?, ?, ?, ?)");
             ps.setInt(1, rs.getInt("id"));
             ps.setString(2, faker.address().streetAddress());
             ps.setString(3, "residencial");
